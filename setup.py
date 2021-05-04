@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="qutorch",
-    version="0.0.4",
-    author="Mario Duran-Vega",
+    version="0.0.5",
+    author="Mario Duran-Vega, Cuauhtemoc Suarez-Ramirez, Chris Mansell",
     author_email="mario.duran.vega@gmail.com",
     description="Quantum circuit simulator based in PyTorch.",
     long_description=long_description,
