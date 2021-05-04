@@ -1,21 +1,20 @@
-from setuptools import setup, find_packages
+import setuptools
 
-setup_args = dict(
-    name='qutorch',
-    version='0.0.3',
-    description='Quantum circuit simulator based in PyTorch.',
-    long_description_content_type="text/markdown",
-    long_description=README + '\n\n' + HISTORY,
-    license='MIT',
-    packages=find_packages(),
-    author='Mario Duran-Vega',
-    author_email='mario.duran.vega@gmail.com',
-    keywords=['PyTorch', 'Quantum', 'Circuit', 'Simulator', 'Python 3'],
-    url='https://github.com/MarioDuran/qutorch',
-    download_url='https://pypi.org/project/qutorch/'
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="qutorch",
+    version="0.0.4",
+    author="Mario Duran-Vega",
+    author_email="mario.duran.vega@gmail.com",
+    description="Quantum circuit simulator based in PyTorch.",
+    long_description=long_description,
+    url="https://github.com/MarioDuran/qutorch",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
 )
-
-install_requires = [
-    'torch>=1.8.1',
-    'numpy>=1.19.5'
-]
